@@ -5,6 +5,7 @@ import Form from './Components/Form/Form'
 import Header from './Components/Header/Header'
 import axios from 'axios'
 // import router from './router'
+// import {HashRouter as Router, Switch, Route} from 'react-router-dom'
 
 class App extends Component {
   constructor(){
@@ -64,20 +65,26 @@ class App extends Component {
     let {products} = this.state
     return (
       <div className="App">
-        <Header/>
-        <div className='columns'>
-          <div className='column1'>
-            <Dashboard
-              products={products}
-              deleteProduct={this.deleteProduct}
-            />
+        {/* <Router */}
+          {/* products={products}  
+        > */}
+          <Header/>
+          <div className='columns'>
+            <div className='column1'>
+              {/* {router} */}
+
+              <Dashboard
+                products={products}
+                deleteProduct={this.deleteProduct}
+              />
+            </div>
+            <div className='column2'>
+              <Form
+                addToInventory={this.addToInventory}
+              />
+            </div>
           </div>
-          <div className='column2'>
-            <Form
-              addToInventory={this.addToInventory}
-            />
-          </div>
-        </div>
+        {/* </Router> */}
       </div>
     );
   }

@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 
 export default class Product extends Component{
+
   render() {
     let productColumn = this.props.products.map((product, i) => {
       return (

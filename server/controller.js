@@ -13,7 +13,7 @@ module.exports = {
     const id = req.params.id
     let {name, price, img} = req.body
     db.update_product([id, name, price, img]).then(response => {
-      res.send(response)
+      res.send(response).status(200)
     }).catch(err => {
       console.log('err:', err)
     })

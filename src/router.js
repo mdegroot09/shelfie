@@ -8,15 +8,22 @@ import Product from './Components/Product/Product'
 export default (
   <div className='columns'>
     <div className='column1'>
-      <Dashboard
+      <Switch>
+        <Route
+          products={this.props.products}
+          path='/' 
+          component={Dashboard}
+        />
+      {/* <Dashboard
         products={this.props.products}
         deleteProduct={this.deleteProduct}
-      />
-    </div>
-    <div className='column2'>
-      <Form
+        />
+        </div>
+        <div className='column2'>
+        <Form
         addToInventory={this.addToInventory}
-      />
+      /> */}
+      </Switch>
     </div>
   </div>
   // <Switch>
