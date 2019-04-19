@@ -5,12 +5,27 @@ import Form from './Components/Form/Form'
 import Header from './Components/Header/Header'
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      products: []
+    }
+  }
+
+
+
   render() {
     return (
       <div className="App">
-        <Dashboard/>
-        <Form/>
         <Header/>
+        <div className='columns'>
+          <div className='column1'>
+            <Dashboard/>
+          </div>
+          <div className='column2'>
+            <Form/>
+          </div>
+        </div>
       </div>
     );
   }

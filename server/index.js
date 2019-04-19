@@ -3,7 +3,6 @@ const express = require('express')
 const app = express()
 const massive = require('massive')
 const {SERVER_PORT, CONNECTION_STRING} = process.env
-
 const ProductCtrl = require('./controller')
 
 app.use(express.json())
