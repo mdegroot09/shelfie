@@ -23,10 +23,6 @@ export default class Form extends Component{
     this.setState({imgurl: ''})
   }
 
-  addToInventory = () => {
-
-  }
-
   render() {
     let {imgurl} = this.state;
     return (
@@ -45,7 +41,7 @@ export default class Form extends Component{
         </div>
         <div className='buttons'>
           <button onClick={() => this.cancelAdd()}>Cancel</button>
-          <button onClick={() => this.addToInventory()}>Add to Inventory</button>
+          <button onClick={() => this.props.addToInventory(this.state)}>Add to Inventory</button>
         </div>
       </div>
     )

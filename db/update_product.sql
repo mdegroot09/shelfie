@@ -1,3 +1,5 @@
 update products
-set description = $2
+set name = $2,
+price = $3,
+img = $4
 where id = $1

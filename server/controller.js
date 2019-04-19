@@ -7,12 +7,12 @@ module.exports = {
       console.log('err:', err)
     })
   },
-  
+
   update(req, res){
     const db = req.app.get('db')
     const id = req.params.id
-    const desc = req.query.desc
-    db.update_product([id, desc]).then(response => {
+    let {name, price, img} = req.body
+    db.update_product([id, name, price, img]).then(response => {
       res.send(response)
     }).catch(err => {
       console.log('err:', err)
@@ -21,10 +21,9 @@ module.exports = {
   
   create(req, res){
     const db = req.app.get('db')
-    console.log('req.body:', req.body)
-    const {name, price, image_url} = req.body
-    const desc = req.body.description
-    db.create_product([name, desc, price, image_url]).then(response => {
+    // console.log('req.body:', req.body)
+    const {name, price, imgurl} = req.body
+    db.create_product([name, price, imgurl]).then(response => {
       res.send(response)
     }).catch(err => {
       console.log('err:', err)

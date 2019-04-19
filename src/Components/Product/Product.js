@@ -12,6 +12,10 @@ export default class Product extends Component{
             <div className='dataDiv'>
               <p className='productName'>{product.name}</p>
               <p className='productName'>${product.price}</p>
+              <div className='editDeleteBtns'>
+                <button >Edit</button>
+                <button onClick={() => this.props.deleteProduct(product)}>Delete</button>
+              </div>
             </div>
           </div>
         </div>
