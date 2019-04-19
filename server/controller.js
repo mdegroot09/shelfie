@@ -1,24 +1,13 @@
 module.exports = {
   getAll(req, res){
     const db = req.app.get('db')
-    // console.log('db:', db)
     db.get_products().then(response => {
       res.send(response)
     }).catch(err => {
       console.log('err:', err)
     })
   },
-
-  getOne(req, res){
-    const db = req.app.get('db')
-    const id = req.params.id
-    db.read_product([id]).then(response => {
-      res.send(response)
-    }).catch(err => {
-      console.log('err:', err)
-    })
-  },
-
+  
   update(req, res){
     const db = req.app.get('db')
     const id = req.params.id
