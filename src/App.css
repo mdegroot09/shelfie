@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .appHeader {
@@ -8,6 +9,7 @@
   background: #AB2A19;
   font-size: 20px;
   display: flex;
+  flex-direction: row;
   justify-content: flex-start;
   align-items: center;
 }
@@ -15,12 +17,21 @@
 .appLogo {
   color: white;
   margin-left: 40px;
+  width: 70%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.shelfieLogo {
+  height: 30px;
+  margin-right: 10px;
 }
 
 .columns {
   display: flex;
   justify-content: space-evenly;
-  margin: 25px 100px;
+  margin: 30px 10%;;
 }
 
 .column1 {
@@ -30,10 +41,107 @@
   justify-content: flex-start;
   align-content: center;
 }
+
+.productDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 30px 0;
+  /* height: 150px; */
+  /* width: 100%; */
+  background: #D34735;
+  border-radius: 5px;
+}
+
+.productDivParent {
+  margin: 5px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 150px;
+  width: 400px;
+}
+
+.productImgDiv {
+  width: 225px;
+  margin: 5px;
+  height: 100%;
+}
+
+.productImg {
+  height: 100%;
+  width: 100%;
+}
+
+.dataDiv {
+  margin: 0;
+  height: 100%;
+  width: 185px;
+  margin-right: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.productName {
+  margin: 0 0 3px 3px;
+}
+
 .column2 {
   width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
+  background: #3AD886;
+  height: 390px;
+  border-radius: 5px;
+}
+
+.preImageDiv {
+  height: 120px;
+  margin: 30px 70px;
+  background: white;
+  background-image: url('https://i.ibb.co/1JRG158/Untitled-1.png');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: top;
+}
+
+.preImage {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.inputs {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 20px 5px 0 5px;
+}
+
+input {
+  width: 100%;
+  margin: 5px 0 10px 0;
+}
+
+.inputText {
+  margin: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 20px 15px 20px;
+}
+
+button {
+  background: #Ed6B5A;
+  border-radius: 3px;
+  border-color: transparent;
 }

@@ -24,19 +24,26 @@ export default class Form extends Component{
   }
 
   addToInventory = () => {
-    
+
   }
 
   render() {
+    let {imgurl} = this.state;
     return (
       <div>
-        <p>Image URL:</p>
-        <input className='urlInput' onChange={(e) => this.handleChange(e.target.value, 'imgurl')} type="text"/>
-        <p>Product Name:</p>
-        <input className='nameInput' onChange={(e) => this.handleChange(e.target.value, 'name')} type="text"/>
-        <p>Price:</p>
-        <input className='priceInput' onChange={(e) => this.handleChange(e.target.value, 'price')} type="text"/>
-        <div>
+        <div className='preImageDiv'>
+          <img className='preImage' src={imgurl} alt=""/>
+          {/* <img className='preImage' src="https://i.ibb.co/1JRG158/Untitled-1.png" alt=""/> */}
+        </div>
+        <div className='inputs'>
+          <p className='inputText'>Image URL:</p>
+          <input className='urlInput' onChange={(e) => this.handleChange(e.target.value, 'imgurl')} type="text"/>
+          <p className='inputText'>Product Name:</p>
+          <input className='nameInput' onChange={(e) => this.handleChange(e.target.value, 'name')} type="text"/>
+          <p className='inputText'>Price:</p>
+          <input className='priceInput' onChange={(e) => this.handleChange(e.target.value, 'price')} type="text"/>
+        </div>
+        <div className='buttons'>
           <button onClick={() => this.cancelAdd()}>Cancel</button>
           <button onClick={() => this.addToInventory()}>Add to Inventory</button>
         </div>

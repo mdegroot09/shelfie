@@ -2,9 +2,24 @@ import React, {Component} from 'react'
 
 export default class Product extends Component{
   render() {
+    let productColumn = this.props.products.map((product, i) => {
+      return (
+        <div className='productDiv' key={i}>
+          <div className='productDivParent'>
+            <div className='productImgDiv'>
+              <img className='productImg' src={product.img} alt="product"/>
+            </div>
+            <div className='dataDiv'>
+              <p className='productName'>{product.name}</p>
+              <p className='productName'>${product.price}</p>
+            </div>
+          </div>
+        </div>
+      )
+    })
     return (
       <div>
-        Product
+        {productColumn}
       </div>
     )
   }
